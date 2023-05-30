@@ -13,11 +13,7 @@ Due to submodules, you should recursively clone the project.
 
 ## Requirements
 
-1. Make sure GPU is avaible and `CUDA>=11.0` has been installed on your computer. You can check it with
-    ```bash
-        nvidia-smi
-    ```
-2. If you use `anaconda3` or `miniconda`, you can run following instructions to download the required packages in python. 
+1. If you use `anaconda3` or `miniconda`, you can run following instructions to download the required packages in python. 
     ```bash
         conda env create -f environment.yml
     ```
