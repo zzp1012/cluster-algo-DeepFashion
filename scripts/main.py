@@ -26,6 +26,8 @@ def add_args() -> argparse.Namespace:
                         help="set the seed.")
     parser.add_argument("--model", default="kmeans", type=str, choices=["kmeans", "spectral"],
                         help="the clustering model.")
+    parser.add_argument("--n_clusters", default=50, type=int,
+                        help="the number of clusters.")
     parser.add_argument("-v", "--verbose", action="store_true", dest="verbose",
                         help="enable debug info output.")
     args = parser.parse_args()
@@ -36,7 +38,8 @@ def add_args() -> argparse.Namespace:
     # set the save_path
     exp_name = "-".join([get_datetime(),
                          f"seed{args.seed}",
-                         f"{args.model}",])
+                         f"{args.model}",
+                         f"n_clusters{args.n_clusters}"])
     args.save_path = os.path.join(args.save_root, exp_name)
     if not os.path.exists(args.save_path):
         os.makedirs(args.save_path)
@@ -58,11 +61,13 @@ def main():
     features, labels = DataUtils.read()
 
     # load the model(clustering algorithm)
-    model = ModelUtils(args.model, n_clusters=len(np.unique(labels)))
+    model = ModelUtils(args.model, n_clusters=args.n_clusters, verbose=args.verbose)
 
     logger.info("#######fit and predict the data.")
     # test the time
-    pred_labels = model.fit_predict(features)
+    pred_labels = model.predict(features)
+    # save the results
+    np.save(os.path.join(args.save_path, "pred_labels.npy"), pred_labels)
 
     # evaluate the model
     logger.info("#######evaluating the model.")
