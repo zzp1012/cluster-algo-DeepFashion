@@ -1,4 +1,6 @@
 import numpy as np
+from sklearnex import patch_sklearn
+patch_sklearn()
 import sklearn.cluster as cluster
 from sklearn.base import BaseEstimator
 from typing import Optional, Union, Tuple, List, Dict
