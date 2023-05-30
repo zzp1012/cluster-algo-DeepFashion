@@ -6,8 +6,8 @@ python main.py --save_root ../outs/predictions/kmeans \
                --n_clusters 3991 \
                -v
 
-python main.py --save_root ../outs/predictions/spectral \
+python main.py --save_root ../outs/predictions/HAC \
                --seed 0 \
-               --model spectral \
-               --n_clusters 2504 \
+               --model HAC \
+               --n_clusters 3991 \
                -v

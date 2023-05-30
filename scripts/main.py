@@ -24,7 +24,7 @@ def add_args() -> argparse.Namespace:
                         help='the path of saving results.')
     parser.add_argument("--seed", default=0, type=int,
                         help="set the seed.")
-    parser.add_argument("--model", default="kmeans", type=str, choices=["kmeans", "spectral"],
+    parser.add_argument("--model", default="kmeans", type=str, choices=["kmeans", "HAC"],
                         help="the clustering model.")
     parser.add_argument("--n_clusters", default=50, type=int,
                         help="the number of clusters.")

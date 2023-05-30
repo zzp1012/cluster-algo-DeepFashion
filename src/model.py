@@ -31,8 +31,9 @@ class ModelUtils:
         """
         if model_name == "kmeans":
             return cluster.KMeans(**kwargs)
-        elif model_name == "spectral":
-            return cluster.SpectralClustering(**kwargs)
+        elif model_name == "HAC":
+            n_clusters = kwargs.get("n_clusters")
+            return cluster.AgglomerativeClustering(n_clusters = n_clusters)
         else:
             raise ValueError("model_name not found.")
 
