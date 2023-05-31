@@ -1,5 +1,6 @@
 name: cluster
 channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
@@ -8,21 +9,57 @@ channels:
 dependencies:
   - _libgcc_mutex=0.1=main
   - _openmp_mutex=5.1=1_gnu
+  - blas=1.0=openblas
   - ca-certificates=2023.01.10=h06a4308_0
   - certifi=2022.12.7=py37h06a4308_0
+  - cycler=0.11.0=pyhd3eb1b0_0
+  - daal4py=2021.6.0=py37h79cecc1_1
+  - dal=2021.6.0=hdb19cb5_916
+  - fftw=3.3.9=h27cfd23_1
+  - freetype=2.12.1=h4a9f257_0
+  - icu=67.1=he1b5a44_0
+  - joblib=1.1.1=py37h06a4308_0
+  - kiwisolver=1.4.4=py37h6a678d5_0
   - ld_impl_linux-64=2.38=h1181459_1
+  - libblas=3.9.0=16_linux64_openblas
+  - libcblas=3.9.0=16_linux64_openblas
   - libffi=3.4.4=h6a678d5_0
   - libgcc-ng=11.2.0=h1234567_1
+  - libgfortran-ng=11.2.0=h00389a5_1
+  - libgfortran5=11.2.0=h1234567_1
   - libgomp=11.2.0=h1234567_1
+  - liblapack=3.9.0=16_linux64_openblas
+  - libopenblas=0.3.21=h043d6bf_0
+  - libpng=1.6.39=h5eee18b_0
   - libstdcxx-ng=11.2.0=h1234567_1
+  - matplotlib=3.2.2=1
+  - matplotlib-base=3.2.2=py37h1d35a4c_1
+  - mpi=1.0=mpich
+  - mpich=3.3.2=h846660c_4
   - ncurses=6.4=h6a678d5_0
+  - numpy=1.21.5=py37hf838250_3
+  - numpy-base=1.21.5=py37h1e6e340_3
   - openssl=1.1.1t=h7f8727e_0
+  - pandas=1.2.3=py37hdc94413_0
   - pip=22.3.1=py37h06a4308_0
+  - pyparsing=3.0.9=py37h06a4308_0
   - python=3.7.16=h7a1cb2a_0
+  - python-dateutil=2.8.2=pyhd3eb1b0_0
+  - python_abi=3.7=2_cp37m
+  - pytz=2022.7=py37h06a4308_0
   - readline=8.2=h5eee18b_0
-  - setuptools=65.6.3=py37h06a4308_0
+  - scikit-learn=1.0.2=py37h51133e4_1
+  - scikit-learn-intelex=2021.6.0=py37h06a4308_0
+  - scipy=1.7.3=py37hf838250_2
+  - seaborn=0.12.2=py37h06a4308_0
+  - setuptools=59.8.0=py37h89c1867_1
+  - six=1.16.0=pyhd3eb1b0_1
   - sqlite=3.41.2=h5eee18b_0
+  - tbb=2021.8.0=hdb19cb5_0
+  - threadpoolctl=2.2.0=pyh0d69192_0
   - tk=8.6.12=h1ccaba5_0
+  - tornado=6.2=py37h5eee18b_0
+  - typing_extensions=4.1.1=pyh06a4308_0
   - wheel=0.38.4=py37h06a4308_0
   - xz=5.4.2=h5eee18b_0
   - zlib=1.2.13=h5eee18b_0
