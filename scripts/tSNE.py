@@ -30,13 +30,17 @@ def plot_2D_scatter(save_path: str,
     """
     assert os.path.exists(save_path), "path {} does not exist".format(save_path)
     assert len(df.columns) == 3, "the dataframe should have 3 columns"
-    fig, ax = plt.subplots(figsize=(10, 8)) 
+    fig, ax = plt.subplots(figsize=(4, 3)) 
     ax = sns.scatterplot(data=df, hue=df.columns[-1], x=df.columns[0], y=df.columns[1])
-    ax.set_title(title)
-    fig.tight_layout()
+    
     # remove the legend
     ax.get_legend().remove()
+
+    fig.tight_layout()
+
     # save the fig
+    path = os.path.join(save_path, "{}.pdf".format(filename))
+    fig.savefig(path)
     path = os.path.join(save_path, "{}.png".format(filename))
     fig.savefig(path)
     plt.close()
